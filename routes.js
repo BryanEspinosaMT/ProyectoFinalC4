@@ -44,7 +44,7 @@ routes.delete('/:table/:field/:id',(req,res)=>{
      let sql = 'DELETE FROM ' + req.params.table+  ' WHERE ' + req.params.field + '= ?'
      conn.query(sql,[req.params.id],(err,rows)=>{
          if(err) return res.send(err) 
-         res.send('Book delete OK!')
+         res.send('delete OK!')
      })
  
     })
@@ -59,7 +59,7 @@ routes.delete('/:table/:field/:id',(req,res)=>{
      
      conn.query(sql,[req.body,req.params.id],(err,rows)=>{
          if(err) return res.send(err) 
-         res.send('Book UPDATED OK!')
+         res.send(' UPDATED OK!')
      })
  
     })

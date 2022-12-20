@@ -7,7 +7,7 @@ const cors=require('cors')
  
 const app=express()
  
-app.set('port',9000)
+app.set('port',9005)
 app.use(cors())
 
 const dbOptions={
@@ -15,7 +15,7 @@ const dbOptions={
     port:'3306',
     user:'root',
     password:'Master205$',
-    database: 'libreria'
+    database: 'deportes'
 }
 
 /// middelwares
