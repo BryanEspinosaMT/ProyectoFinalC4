@@ -56,27 +56,23 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:9005/api/deportes HTTP/1.1
+GET http://localhost:9005/api/usuarios HTTP/1.1
 
 ###
-POST http://localhost:9005/api/deportes HTTP/1.1
+POST http://localhost:9005/api/usuarios HTTP/1.1
 Content-Type: application/json
 
 {
-    "dep_id":"7",
-    "dep_nombre":"Billar"
-    
+    "usu_id": 3,
+    "usu_email": "bryanespinosa2000@gmail.com",
+    "usu_clave": "1234555454",
+    "usu_nombres": "Bryan50",
+    "usu_apellidos": "Espinosa50"
 }
 
 ###
-DELETE http://localhost:9005/api/deportes/dep_id/7 HTTP/1.1
+DELETE http://localhost:9005/api/deportes/deporte/6 HTTP/1.1
  
 ###
-PUT http://localhost:9005/api/deportes/dep_id/6 HTTP/1.1
+PUT http://localhost:9005/api/4 HTTP/1.1
 Content-Type: application/json
-
-{
-    
-    "dep_nombre":"Formula 2"
-    
-}
