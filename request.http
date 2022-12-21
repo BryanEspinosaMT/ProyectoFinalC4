@@ -63,14 +63,20 @@ POST http://localhost:9005/api/deportes HTTP/1.1
 Content-Type: application/json
 
 {
-    "lib_nombre":"La Dama de las Camelias",
-    "lib_autor":"Alejandro Dumas",
-    "lib_editorial": "Planeta"
+    "dep_id":"7",
+    "dep_nombre":"Billar"
+    
 }
 
 ###
-DELETE http://localhost:9005/api/deportes/deporte/6 HTTP/1.1
+DELETE http://localhost:9005/api/deportes/dep_id/7 HTTP/1.1
  
 ###
-PUT http://localhost:9005/api/4 HTTP/1.1
+PUT http://localhost:9005/api/deportes/dep_id/6 HTTP/1.1
 Content-Type: application/json
+
+{
+    
+    "dep_nombre":"Formula 2"
+    
+}
