@@ -1,4 +1,6 @@
-  
+//import{config} from 'dotenv'
+
+//import './config.js'
 const express=require('express')
 const mysql=require('mysql2')
 const myconn=require('express-myconnection')
@@ -7,15 +9,15 @@ const cors=require('cors')
  
 const app=express()
  
-app.set('port',9005)
+app.set('port',9000)
 app.use(cors())
 
 const dbOptions={
     host: 'localhost',
     port:'3306',
     user:'root',
-    password:'Master205$',
-    database: 'deportes'
+    password:'mysql2022*',
+    database: 'library'
 }
 
 /// middelwares

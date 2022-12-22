@@ -45,24 +45,27 @@ class MenuInicial extends Component {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mx-auto">
-                            <li className="nav-item" hidden={this.state.estaLoguin}>
-                                <Link className="nav-link" aria-current="page" to='/PageLogin'>Login</Link>
-                            </li>
-                            <li className="nav-item" hidden={!this.state.estaLoguin}>
-                                <Link className="nav-link" aria-current="page" to='/PageEventos'>Eventos</Link>
-                            </li>
-                            <li className="nav-item" hidden={!this.state.estaLoguin}>
-                                <Link className="nav-link" aria-current="page" to='/PageDeportes'>Deportes</Link>
-                            </li>
-                            <li className="nav-item" hidden={!this.state.estaLoguin}>
-                                <Link className="nav-link" aria-current="page" to='/PageEquipos'>Equipos</Link>
-                            </li>
-                            <li className="nav-item" hidden={!this.state.estaLoguin}>
-                                 <Link className="nav-link" aria-current="page" to='/PageUsuarios'>Usuarios</Link>
-                            </li>
-                            <li className="nav-item" hidden={!this.state.estaLoguin}>
-                                <Link className="nav-link" onClick={()=>this.cerrarSesion()} to='/'>Salir</Link>
-                            </li>
+                        <li className="nav-item" hidden={this.state.estaLoguin}>
+              <Link className="nav-link" aria-current="page" to='/PageLogin'><h4>Login</h4></Link>
+            </li>
+            <li className="nav-item" hidden={!this.state.estaLoguin}>
+              <Link className="nav-link" aria-current="page" to='/'><h4>Marcadores</h4></Link>
+            </li>
+            <li className="nav-item" hidden={!this.state.estaLoguin}>
+              <Link className="nav-link" aria-current="page" to='/PageEventos'><h4>Eventos</h4></Link>
+            </li>
+            <li className="nav-item" hidden={!this.state.estaLoguin}>
+              <Link className="nav-link" aria-current="page" to='/PageDeportes'><h4>Deportes</h4></Link>
+            </li>
+            <li className="nav-item" hidden={!this.state.estaLoguin}>
+              <Link className="nav-link" aria-current="page" to='/PageEquipos'><h4>Equipos</h4></Link>
+            </li>
+            <li className="nav-item" hidden={!this.state.estaLoguin}>
+              <Link className="nav-link" aria-current="page" to='/PageUsuarios'><h4>Usuarios</h4></Link>
+            </li>
+            <li className="nav-item" hidden={!this.state.estaLoguin}>
+              <Link className="nav-link" onClick={()=>this.cerrarSesion()} to='/'><h4>Salir</h4></Link>
+            </li>
 
                         </ul>
                     </div>

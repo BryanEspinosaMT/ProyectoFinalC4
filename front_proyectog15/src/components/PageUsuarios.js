@@ -5,8 +5,8 @@ import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import { Component } from 'react';
 
-const url = 'http://localhost:9005/api/usuarios'
-const field_id = '/usu_id'
+const url = 'http://localhost:9000/api/usuarios'
+const field_id = '/usu_id/'
 
 class PageUsuarios extends Component{
 
@@ -36,10 +36,10 @@ class PageUsuarios extends Component{
   peticionPost = async () => {
     delete this.state.form.usu_id //esto borra el campo usu_id
     await axios.post(url, this.state.form).then(response => {
-      this.modalInsertar();
-      this.peticionGet();
-    }).catch(err => {
-      console.log(err.message);
+      this.modalInsertar()
+      this.peticionGet()
+    }).catch(error => {
+      console.log(error.message);
     })
   }
 
@@ -106,9 +106,7 @@ class PageUsuarios extends Component{
     return (
       <div className="App">
         <br /><br /><br />
-        <button className="btn btn-success" onClick={()=> {
-          this.setState({form:null, tipoModal:'insertar'}); this.modalInsertar()
-          }} >Agregar Usuario</button>
+        <button className="btn btn-success" onClick={()=> {this.setState({form:null, tipoModal:'insertar'}); this.modalInsertar()}} >Agregar Usuario</button>
         <br /><br />
         <table className="table ">
         <thead>
@@ -175,7 +173,7 @@ class PageUsuarios extends Component{
 
         <Modal isOpen={this.state.modalEliminar}>
           <ModalBody>
-            ¿Estas seguro que deseas eliminar?
+            ¿Estas seguro de eliminar?
           </ModalBody>
           <ModalFooter>
             <button className="btn btn-danger" onClick={()=> this.peticionDelete()} >Si</button>
